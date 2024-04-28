@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_background"
+    android:orientation="vertical"
+    tools:context=".TransferActivity.TransferActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="12dp"
+            android:layout_marginStart="16dp"
+            android:src="@drawable/arrow_back"/>
+
+
+        <TextView
+            android:id="@+id/headTransferText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:layout_marginStart="16dp"
+            android:fontFamily="@font/golos_text_bold"
+            android:text="Перевод в Узбекистан"
+            android:textColor="@color/main_text_color"
+            android:textSize="32sp" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="0dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginHorizontal="16dp">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/cardNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#FFFFFF"
+                    android:hint="Номер карты получателя"
+                    android:inputType="number"
+                    android:paddingHorizontal="16dp"
+                    android:paddingVertical="19.5dp"
+                    android:singleLine="true"
+                    android:textColorHint="#525252"
+                    android:textSize="16sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="0dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginHorizontal="16dp">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/transferAmount"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Сумма"
+                    android:background="#FFFFFF"
+                    android:textColorHint="#525252"
+                    android:inputType="numberDecimal"
+                    android:textSize="16sp"
+                    android:paddingVertical="19.5dp"
+                    android:singleLine="true"
+                    android:paddingHorizontal="16dp"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="0dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginHorizontal="16dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="19.5dp"
+                    android:textSize="14sp"
+                    android:layout_alignParentStart="true"
+                    android:textColor="#60000000"
+                    android:text="Курс"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="16dp"
+                    android:paddingVertical="19.5dp"
+                    android:textSize="14sp"
+                    android:textColor="#000000"
+                    android:layout_alignParentEnd="true"
+                    android:fontFamily="@font/golos_text_medium"
+                    android:text="1 TJS = 0.0343 RUB"/>
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+
+
+
+    </LinearLayout>
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/doTransferButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginHorizontal="19dp"
+        android:layout_marginBottom="16dp"
+        android:textSize="16dp"
+        android:paddingVertical="16dp"
+        android:fontFamily="@font/golos_text_semibold"
+        android:text="Продолжить"
+        android:backgroundTint="@color/button_color"
+        app:cornerRadius="32dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
